@@ -1,7 +1,7 @@
 /*
   Angel Odiel Treviño Villanueva
   A01336559
-  Problema: 2A  Fecha: 3/Marzo Materia: Reto Semestral
+  Problema: 2H  Fecha: 3/Marzo Materia: Reto Semestral
 */
 
 #include <bits/stdc++.h>
