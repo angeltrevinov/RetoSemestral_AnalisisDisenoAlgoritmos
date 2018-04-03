@@ -7,16 +7,12 @@ class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
         int size = cost.size();
-        vector <int> Store(size); //crear un nuevo vector para aplicar programacion dinamica
 
-        //puedes empezar en el escalon 0 o 1
-        Store[0] = cost[0];
-        Store[1] = cost[1];
-
+        //puedes empezar en el escalon 0 o 1, entonces se mantiene
         for(int i = 2; i < size; i++){
-            Store[i] = cost[i] + min(Store[i-1], Store[i-2]); //to see how many steps I should take
+            cost[i] = cost[i] + min(cost[i-1], cost[i-2]); //to see how many steps I should take to that step
         }
 
-        return min(Store[size-1], Store[size-2]); //result
+        return min(cost[size-1], cost[size-2]); //result
     }
 };
